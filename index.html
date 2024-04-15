@@ -15,7 +15,7 @@
 
             <h2>Navigation</h2>
             <nav>
-                <a href = "#Summary">Summary</a> | <a href = "#Attendance">Attendance</a> | <a href = "#Start">Meeting</a>
+                <a href = "#Summary">Summary</a> | <a href = "#Attendance">Attendance</a> | <a href = "#Start">Meeting</a> | <a href = "#Form">Suggestion Form</a>
             </nav>
         </header>
         <main>
@@ -23,29 +23,101 @@
                 <section><h3><a name = "Attendance"></a>Attendance</h3></section>
                 <div>Absent:
                 <ul>
-                    <li><span style = "color:green"></span>Jeremy</li>
-                    <li>Safira</li>
-                    <li>Tucker</li>
-                    <li>Grant</li>
+                    <li><span style = "color:green">Jeremy</span></li>
+                    <li><span style = "color:green">Safira</span></li>
+                    <li><span style = "color:green">Tucker</span></li>
+                    <li><span style = "color:red">Grant</span></li>
                 </ul>
                 </div>
             </article>
 
             <article>
                 <section><h3><a name = "Start"></a>Start of Meeting</h3></section>
-                <p>Testing</p>
+                <p>Meeting start with overview of last meeting. Discussion on new title <strong>Big Chungus</strong>. Review of work completed since last meeting. Senior level designer, Jeff Chan, to be named <i>Lead Designer</i>.<br>
+                    <br>
+                    Agenda:
+                    <ol>
+                        <li>Discuss timeline</li>
+                        <li>Review suggestions from last meeting</li>
+                        <li>Finalize theme and setting</li>
+                        <li>Compile references for design/art/music teams</li>
+                    </ol>
+                </p>
             </article>
 
             <article>
                 <section><h3><a name = "Summary"></a>Summary</h3></section>
-                <p>Testing</p>
+                <p>New direction for project decided. <b>Addition input or ideas can be suggested in form at bottom of page.</b> Setting will be medieval fantasy in the same thread of Tolkien. Game will involve magic system of some sort though main gameplay style is still undecided.<br> 
+                <details>
+                    <summary>Image Reference</summary>
+                    <img src = "Medieval.jpg">
+                </details><br>
+                <details>
+                    <summary>Music Reference | Baldur's Gate 3 - Down By the River (Instrumental)</summary>
+                    <audio controls>
+                        <source src = "Baldur's Gate 3 OST - Down By The River (Instrumental).mp3" type = "audio/mpeg">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </details><br>
+                <details>
+                    <summary>Video Reference</summary>
+                    <video controls>
+                        <source src = "Never thought I'd die fighting side by side with an Elf.mp4" type = "video/mp4">
+                    </video>
+                </details><br>
+
+                Recommendation made by lead developers to staff is to play games along the same thread as DnD and MMOs in order to gain better understanding of genre and ideas. Master document has been updated with additional information.
+                One on one meetings will be scheduled in the following days.
+                </p>
             </article>
         </main>
-    </body>
 
-    <footer>
         <hr>
-        <p>Notetaker: Joel Speen</p>
-        <p><em>Copyright</em> Unaware Squad Inc.</p>
-    </footer>
+
+        <section><h2><a name = "Form"></a>Suggestion Form</h2></section>
+        <form action="/action_page.php">
+            <fieldset>
+                <label for = "name">Name:</label>
+                <input type = "text", id = "name"><br><br>
+
+                <label for = "date">Today's Date:</label>
+                <input type = "date", id = "date"><br><br>
+
+                <label for = "attended">Did you attend this meeting?</label>
+                <input type = "checkbox", id = "attended"><br><br>
+
+                If yes, did you attend the entire meeting?<br>
+                <label for = "yes">Yes:</label> <input type = "radio", id = "yes"> <label for = "no">No:</label> <input type = "radio", id = "no"><br><br>
+
+                <label for = "helpful">Was this meeting helpful?</label><br>
+                <select id = "helpful">
+                    <option value = "Yes">Yes</option>
+                    <option value = "No">No</option>
+                    <option value = "Kinda">Kinda</option>
+                </select><br><br>
+
+                <label for = "suggestion">Suggestions:</label><br>
+                <textarea id = "suggestion", rows = "4", cols = "100">Write your suggestions here.</textarea><br><br>
+
+                <label for = "team">Team:</label>
+                <input list = "teams", id = "team">
+                <datalist id = "teams">
+                    <option value = "Audio">
+                    <option value = "Art">
+                    <option value = "Animation">
+                    <option value = "Design">
+                    <option value = "Production">
+                </datalist><br><br>
+
+                <button type = "button">Submit</button>
+            </fieldset>
+        </form>
+
+        <hr>
+
+        <footer>
+            <p>Notetaker: Joel Speen</p>
+            <p><em>Copyright</em> Unaware Squad Inc.</p>
+        </footer>
+    </body>
 </html>
