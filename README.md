@@ -1,2 +1,2 @@
-# Lab 2 - Starter
+# Lab 3
 https://frndlydragon.github.io/Lab2_Starter/
