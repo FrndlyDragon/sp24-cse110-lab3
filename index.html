@@ -1,22 +1,48 @@
 <!DOCTYPE html> 
 <html lang="en">
+    <style>
+        /*CSS for webpage*/
+
+        :root {
+            --blue: #639ad4;
+        }
+
+        body {
+            background-color: #323438;
+            color: #cfcfcf;
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 300;
+            font-style: normal;
+            font-variation-settings:
+            "wdth" 100;
+        }
+
+        
+    </style>    
+
     <head>
         <title>Unaware Squad</title>
         <meta name = "notetaker" content = "Jordan Huynh">
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <header>
-            <h1>Meeting Records</h1>
-            <b>Meeting No. 42</b><br><i>5/04/2077</i>
+            <h1><span class="border center">Meeting Records</span></h1>
+            <b>Meeting No. 42</b><br>
+            <i>5/04/2077</i>
             
             <hr>
-
+            <span class="center">
             <h2>Navigation</h2>
             <nav>
                 <a href = "#Summary">Summary</a> | <a href = "#Attendance">Attendance</a> | <a href = "#Start">Meeting</a> | <a href = "#Form">Suggestion Form</a>
             </nav>
+            </span>
         </header>
         <main>
             <article>
@@ -33,14 +59,14 @@
 
             <article>
                 <section><h3><a name = "Start"></a>Start of Meeting</h3></section>
-                <p>Meeting start with overview of last meeting. Discussion on new title <strong>Big Chungus</strong>. Review of work completed since last meeting. Senior level designer, Jeff Chan, to be named <i>Lead Designer</i>.</p><br>
-                <br>
+                <p>Meeting start with overview of last meeting. Discussion on new title <strong>Big Chungus</strong>. Review of work completed since last meeting. Senior level designer, Jeff Chan, to be named <i>Lead Designer</i>.</p>
                 Agenda:
+                <hr>
                 <ol>
-                    <li>Discuss timeline</li>
-                    <li>Review suggestions from last meeting</li>
-                    <li>Finalize theme and setting</li>
-                    <li>Compile references for design/art/music teams</li>
+                    <li><span style="text-decoration: line-through;">Discuss timeline</span></li>
+                    <li><span style="text-decoration: line-through;">Review suggestions from last meeting</span></li>
+                    <li><span style="text-decoration: line-through;">Finalize theme and setting</span></li>
+                    <li><span style="text-decoration: line-through;">Compile references for design/art/music teams</span></li>
                 </ol>
             </article>
 
