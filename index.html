@@ -16,9 +16,171 @@
             font-style: normal;
             font-variation-settings:
             "wdth" 100;
+            line-height: 1.6;
         }
 
+        h3.summary {
+            background-color: var(--blue, #639ad4);
+            color:black;
+            text-align: center;
+            margin-top: 1rem;
+            margin-right: 25%;
+            margin-bottom: 1rem;
+            margin-left: 25%;
+            border-radius: 5pt;
+        }
+
+        h3.start {
+            background-color: var(--blue, #639ad4);
+            color:black;
+            text-align: center;
+            margin: 1rem 25% 1rem 25%;
+            border-radius: 5pt;
+        }
+
+        .block, h1 {
+            border: 2px; 
+            border-style: solid; 
+            border-color: paleturquoise;
+            border-radius: 5px;
+        }
+
+        ul.parent {
+            display: grid;
+            gap: 3px;
+            align-items: center;
+            justify-content: left;
+            grid-template-columns: 100%;
+            text-align: left;
+            border: 1pt solid white;
+            border-radius: 5px;
+            margin: 1rem 87% 1rem 1rem;
+            padding-top: 10px;
+            padding-right: 1vw;
+            padding-bottom: 10px;
+            padding-left: 2.5vw;
+            min-width: 200px;
+            background-color: #545454; 
+        }
+
+        .em li {
+            font-size: 1em;
+            color: white;
+        }
+
+        ol.parent {
+            text-align:left;
+            border: 1pt solid white;
+            border-radius: 5px;
+            margin: 1rem 75% 1rem 1rem;
+            padding: 10px 50px 10px 50px;
+            background-color: #545454; 
+        }
+
+        .border {
+            display: block;
+        }
+
+        *.center {
+            text-align: center;
+        }
+    
+        a {
+            color: var(--blue);
+        }
+
+        a[href = "#Attendance"] {
+            color: rgb(194, 181, 0);
+        }
+
+        a:hover {
+            background-color: #545454;
+        }
+
+        a:active {
+            color:#154578;
+        }
+
+        fieldset {
+            min-width: 60vw;
+            display: inline-block;
+        }
+
+        fieldset > #suggestion {
+            width: 50%;
+            background-color: gray;
+        }
+
+        label ~ button {
+            background-color: #639ad4;
+            border-radius: 5px;
+        }
+
+        label + #date {
+            background-color: gray;
+        }
+
+        .bold {
+            & > b {
+                color: rgb(149, 149, 255);
+            }
+        }
+
+        section:has(+ p) {
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+
+        #name {
+            background-color: gray;
+        }
+
+        hr {
+            height: 1mm;
+            width: 25em;
+            border: none;
+            background-color: white;
+        }
+
+        nav {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            background-color: #323438;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            gap: 1%;
+        }
+
+        @media only screen and (max-device-width: 750px) {
+            nav {
+                font-size: 3em;
+            }
+        }
+
+        @media only screen and (max-device-width: 800px) and (min-device-width: 700px){
+            nav {
+                font-size: 1.5em;
+            }
+        }
         
+        @media only screen and (max-device-width: 800px) {
+            ul.parent {
+                min-width: 400px;
+                padding: 10px 50px 10px 100px;
+                background-color: #545454; 
+            } 
+        }
+
+        @media only screen and (max-device-width: 800px) {
+            ol.parent {
+                min-width: 400px;
+                padding: 10px 50px 10px 100px;
+                background-color: #545454; 
+            } 
+        }
     </style>    
 
     <head>
@@ -33,46 +195,59 @@
     <body>
         <header>
             <h1><span class="border center">Meeting Records</span></h1>
+            <img src="Quagsire_is_unaware.jpg" alt="logo" width = 80 height = 80 style="float: right">
             <b>Meeting No. 42</b><br>
-            <i>5/04/2077</i>
-            
+            <i>5/04/2077</i><br><br>
             <hr>
-            <span class="center">
-            <h2>Navigation</h2>
-            <nav>
-                <a href = "#Summary">Summary</a> | <a href = "#Attendance">Attendance</a> | <a href = "#Start">Meeting</a> | <a href = "#Form">Suggestion Form</a>
-            </nav>
-            </span>
         </header>
         <main>
+            <span class="center">
+                <h2>Navigation</h2>
+                <nav>
+                    <div><a href = "#Attendance">Attendance</a></div> | <div><a href = "#Start">Meeting</a></div> | <div><a href = "#Summary">Summary</a></div> | <a href = "#Form">Suggestion Form</a>
+                </nav>
+            </span>
+            <hr>
             <article>
                 <section><h3><a name = "Attendance"></a>Attendance</h3></section>
                 <div>Absent:
-                <ul>
-                    <li><span style = "color:green">Jeremy</span></li>
-                    <li><span style = "color:green">Safira</span></li>
-                    <li><span style = "color:green">Tucker</span></li>
-                    <li><span style = "color:red">Grant</span></li>
+                <ul class="parent">
+                    <li><span style = "color:rgb(0, 196, 0)">Jeremy</span></li>
+                        <ul class="em">
+                            <span style="font-size: .7em;"><li>Out sick</li></span>
+                        </ul>
+                    <li><span style = "color:rgb(0, 196, 0)">Safira</span></li>
+                        <ul class="em">
+                            <span style="font-size: .7em;"><li>Out sick</li></span>
+                        </ul>
+                    <li><span style = "color:rgb(0, 196, 0)">Tucker</span></li>
+                        <ul class="em">
+                            <span style="font-size: .7em;"><li>Vacation</li></span>
+                        </ul>
+                    <li><span style = "color:rgb(255, 53, 53)">Grant</span></li>
+                        <ul>
+                            <span style="font-size: 70%;"><li>Unexplained</li></span>
+                        </ul>
                 </ul>
                 </div>
             </article>
 
             <article>
-                <section><h3><a name = "Start"></a>Start of Meeting</h3></section>
-                <p>Meeting start with overview of last meeting. Discussion on new title <strong>Big Chungus</strong>. Review of work completed since last meeting. Senior level designer, Jeff Chan, to be named <i>Lead Designer</i>.</p>
-                Agenda:
+                <section><h3 class="start"><a name = "Start"></a>Start of Meeting</h3></section>
                 <hr>
-                <ol>
+                Agenda:
+                <ol class="parent">
                     <li><span style="text-decoration: line-through;">Discuss timeline</span></li>
                     <li><span style="text-decoration: line-through;">Review suggestions from last meeting</span></li>
                     <li><span style="text-decoration: line-through;">Finalize theme and setting</span></li>
                     <li><span style="text-decoration: line-through;">Compile references for design/art/music teams</span></li>
                 </ol>
+                <p>Meeting start with overview of last meeting. Discussion on new title <strong>Big Chungus</strong>. Review of work completed since last meeting. Senior level designer, Jeff Chan, to be named <i>Lead Designer</i>.</p>
             </article>
 
             <article>
-                <section><h3><a name = "Summary"></a>Summary</h3></section>
-                <p>New direction for project decided. <b>Addition input or ideas can be suggested in form at bottom of page.</b> Setting will be medieval fantasy in the same thread of Tolkien. Game will involve magic system of some sort though main gameplay style is still undecided.</p><br> 
+                <section><h3 class="summary"><a name = "Summary"></a>Summary</h3></section>
+                <p class="bold">New direction for project decided. <b>Addition input or ideas can be suggested in form at bottom of page.</b> Setting will be medieval fantasy in the same thread of Tolkien. Game will involve magic system of some sort though main gameplay style is still undecided.</p><br> 
                 <details>
                     <summary>Image Reference</summary>
                     <img src = "Medieval.jpg" alt = "Medieval Town">
@@ -86,7 +261,7 @@
                 </details><br>
                 <details>
                     <summary>Video Reference</summary>
-                    <video controls>
+                    <video width = "500" height = "300" controls>
                         <source src = "Ref_vid.mp4" type = "video/mp4">
                     </video>
                 </details><br>
@@ -123,7 +298,7 @@
                 </select><br><br>
 
                 <label for = "suggestion">Suggestions:</label><br>
-                <textarea id = "suggestion" rows = "4" cols = "100">Write your suggestions here.</textarea><br><br>
+                <textarea id = "suggestion">Write your suggestions here.</textarea><br><br>
 
                 <label for = "team">Team:</label>
                 <input list = "teams" id = "team">
